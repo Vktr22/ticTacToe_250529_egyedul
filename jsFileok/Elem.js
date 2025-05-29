@@ -9,10 +9,12 @@ export default class Elem {
         this.esemeny();
     }
     megjelenit() {
-        this.szuloElem.innerHTML += `<div class="elem" data-index="${this.#index}">
-                                        ${this.#adat}
-                                    </div>`;
+        
+        let html=`<div class="elem">${this.#adat}</div>`
+        this.szuloElem.insertAdjacentHTML("beforeend",html)
         this.elem = this.szuloElem.querySelector(".elem:last-child");
+        
+        //console.log(this.elem);
     }
 
 
@@ -20,6 +22,7 @@ export default class Elem {
         //this.elem=document.querySelector(".elem:last-child")
         this.elem.addEventListener("click",()=>{
             const e = new CustomEvent("kivalaszt",{detail:this.#index})
+            console.log("kivalaszt event", e);
             window.dispatchEvent(e)
         })
     }
