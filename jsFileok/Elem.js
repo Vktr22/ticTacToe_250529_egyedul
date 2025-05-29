@@ -11,7 +11,7 @@ export default class Elem {
     megjelenit() {
         
         let html=`<div class="elem">${this.#adat}</div>`
-        this.szuloElem.insertAdjacentHTML("beforeend",html)
+        this.szuloElem.insertAdjacentHTML("beforeend",html) //insertAdjacentHTML-> jobb DOM modositashoz, mint az innerHtml(ez szöveget ad vissza, a masik rogton modositja)
         this.elem = this.szuloElem.querySelector(".elem:last-child");
         
         //console.log(this.elem);

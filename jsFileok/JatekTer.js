@@ -16,14 +16,6 @@ export default class JatekTer{
         this.#lista = adat;
     }
 
-    /**megjelenit() {
-        let text = `<div class="jatek-ter" id="jatek-ter-${this.#index}">`;
-        for (let i = 0; i < this.#adat.length; i++) {
-            text += `<div class="elem" data-index="${i}">${this.#adat[i]}</div>`;
-        }
-        text += `</div>`;
-        this.szuloElem.innerHTML = text;
-    }*/
    megjelenit() {
     this.szuloElem.innerHTML = ""; // torol
         for (let i = 0; i < this.#lista.length; i++) {
@@ -32,16 +24,6 @@ export default class JatekTer{
     }
 
 
-    /**
-     * esemenykezelo(){
-        window.addEventListener("kivalaszt",(event)=>{
-            let index=event.detail
-            this.#adat[index]="*"
-            this.szuloElem.innerHTML=""
-            this.megjelenit()
-        })
-    }
-     */
 
     esemeny() {
         window.addEventListener("kivalaszt",(event)=>{
