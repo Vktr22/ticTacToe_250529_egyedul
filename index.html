@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sytle/style.css">
+    
     <script type="module" src="jsFileok/main.js"></script>
     <title>Nádas Viki</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <h1>Tic Tac Toe</h1>
     </header>
-    <article></article>
-    <div></div>
+    <section id="sectUrlap">
+        <form action="" id="formUrlap">
+            <!--űrlap elemek-->
+            <fieldset>
+                <legend>A játékosok neve:</legend>
+                <label for="fname">1. játékos (X):</label><br>
+                <input type="text" id="fname" name="fname" value=""><br>
+                <label for="lname">2. játékos (O):</label><br>
+                <input type="text" id="lname" name="lname" value=""><br><br>
+                <input type="submit" value="start">
+            </fieldset>
+        </form>
+    </section>
+    <section id="jatekTer">
+        <!--9 div kell ide-->
+    </section>
+    <aside>
+        <h1>A játék állapota:</h1>
+
+    </aside>
+    <footer id="footer">Készítette: Nádas Viktória</footer>
 </body>
 </html>
